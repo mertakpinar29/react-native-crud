@@ -24,8 +24,6 @@ const Feed = ({navigation}) => {
     }
 
     useEffect(() => {
-        fetchStudents()
-
         firestore().collection('students').where("type", "==", "student").onSnapshot(querySnapshot => {
             querySnapshot.docChanges().forEach(change => {
                 if(change.type == 'added') {
@@ -40,7 +38,6 @@ const Feed = ({navigation}) => {
                 fetchStudents()
             })
         })
-
     }, [])
     return (
         <View>

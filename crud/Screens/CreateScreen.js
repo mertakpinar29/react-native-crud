@@ -19,6 +19,7 @@ const CreateScreen = ({navigation}) => {
             age: '',
             school: '',
             department: '',
+            type: 'student'
         })
     }
 
